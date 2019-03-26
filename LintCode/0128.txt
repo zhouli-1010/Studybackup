@@ -1,0 +1,24 @@
+/*
+*reverseInteger
+*/
+ public int reverseInteger(int number) {
+
+	    String s = String.valueOf(number);
+        String b = "";
+	    int idx = s.length();
+	    while (idx > 0 ){
+	        b = b + s.charAt(idx-1);
+	        idx--;
+	    }
+	  return Integer.parseInt(b);
+    }
+    
+    
+/*
+*lowercaseToUppercase
+*/
+  public char lowercaseToUppercase(char character) {
+
+        return Character.toUpperCase(character);
+    }
+}

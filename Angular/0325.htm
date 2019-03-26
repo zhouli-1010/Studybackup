@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+ 
+<div  ng-app="myApp" ng-controller="myCtrl" data-ng-init="firstname='Ozaki'">
+     <p>Name : <span data-ng-bind="firstname"></span></p>
+     <h1>Hello {{firstname}}</h1>
+<br>
+	Firstname:<input type="text" ng-model="fristN"><br>
+	Lastname :<input type="text" ng-model="lastN"><br>
+	<br>
+	Your Nme:{{fristN + lastN}}
+<br>
+	<div ng-init="person={first:'John',last:'Doe'}">
+	<p>YourName is :{{person.first + person.last}}</p>
+	<p>YourName is :<span ng-bind="person.first + ' ' + person.last"></span></p>
+	</div>
+</div>
+	
+ <script>
+ 	var app = angular.module('myApp',[]);
+ 	app.controller('myCtrl', function($scope){
+ 		$scope.fristN = "John";
+ 		$scope.lastN = "Wu";
+ 	
+ 	
+ 	});
+  </script>
+
+
+
+
+</body>
+</html>
