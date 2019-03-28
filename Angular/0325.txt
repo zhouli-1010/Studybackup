@@ -1,0 +1,96 @@
+select
+  CMPCD,
+  ACKCD,
+  ACS,
+  ACSNM
+from
+ AM13ACS
+
+WHERE
+    CMPCD = '001' AND
+    ACS = '001111'
+
+
+
+SELECT
+   CMPCD,
+	ACKCD,
+	ACS,
+	ACSNM
+ from  nn_msk_YN55DBH
+ where
+   cmpcd='001'
+ and stn_cd = '02'
+ and acs = '000703'
+
+
+select
+  	SITEN_CD,
+	KOJIKAMOK_CD SITEN_NM,
+	KAMOKU_NM,
+	KAMOKHANTEI_KBNNM,
+	KOJIJIMU_NM,
+	KOJI_TAIKEI
+from  
+  KKT2000 k
+where 
+   KOJIKAMOK_CD = '100032'
+and siten_cd = '02'
+
+
+
+
+
+07 160036
+1035
+001401
+
+cmd
+shutdown -r
+
+
+
+insert into KKT2000 (
+	SITEN_CD,
+	KOJIKAMOK_CD,
+	KAMOKHANTEI_KBN,
+	KESSANKI,
+	KESSANKI_SIHAN_KBN,
+	HAISI_KOJIHANTEI,
+	KOJI_NM_KANJI,
+	UPDYMDHMS,
+	OYA_KOJIKAMOKU_CD,
+	JOUSETU_KAMOKU_KBN,
+	SIWAKE_NYURYOKUKA_FLG,
+	SYOUKOJI_TEKIYOU_FLG,
+	KOJI_TAIKEI
+)
+values(
+'02','100032','1','1601','2','0','åãçáÉeÉXÉgêVê›çHéñ','2018-03-26','','0','1','0','4')
+
+
+
+koji_taikei = '4'
+
+select
+  k.koji_taikei, k.* 
+from  
+  KKT2000 k
+where 
+   KOJIKAMOK_CD = '100032'
+and siten_cd = '02'
+
+
+
+update 
+  KKT2000 k
+set 
+  k.siten_cd = '02'
+where 
+   KOJIKAMOK_CD like '480015'
+and siten_cd = '06'
+
+
+/C/shuu/00_Study
+
+ÇxÇmÇTÇT_îCà”îÔñ⁄
